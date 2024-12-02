@@ -33,18 +33,11 @@ const QRCodePage: React.FC = () => {
         Insira uma URL abaixo para gerar um QR Code:
       </p>
       <input
+      className="p-2 w-[20rem] sm:w-[30rem] max-w-[500px] mb-5 border border-gray-300 rounded"
         type="text"
         placeholder="Digite uma URL"
         value={url}
         onChange={handleInputChange}
-        style={{
-          padding: "10px",
-          width: 500,
-          maxWidth: "500px",
-          marginBottom: "20px",
-          border: "1px solid #ccc",
-          borderRadius: "5px",
-        }}
       />
       <div
         dangerouslySetInnerHTML={{ __html: qrCodeHtml }}
